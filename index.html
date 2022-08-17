@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <aside class="profile-card padding animate__animated animate__fadeInLeft">
+        <div class="image-profile-wrapper">
+          <div class="image-profile"></div>
+        </div>
+        <h2 class="profile-name purpleColor">muhammad rizky yuhari</h2>
+
+        <h3 class="jumlah-buku-title">Jumlah Buku</h3>
+        <h4 class="jumlah-buku"></h4>
+
+        <form id="adding-form">
+          <div class="form-gap">
+            <label for="book-title">Book Title</label>
+            <input
+              required="asu"
+              id="book-title"
+              type="text"
+              placeholder="Book Title"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-gap">
+            <label for="book-author">Book Author</label>
+            <input
+              required
+              id="book-author"
+              type="text"
+              placeholder="Book Title"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-gap">
+            <label for="book-year">Date</label>
+            <input required id="book-year" type="date" min="1960" max="2022" />
+          </div>
+          <div class="form-gap">
+            <label for="book-status">Selesai dibaca</label>
+            <input id="book-status" type="checkbox" />
+            <span class="checkmark"></span>
+          </div>
+          <button id="add-book" class="green" type="submit">Add Book</button>
+        </form>
+      </aside>
+
+      <div
+        class="bookshelf-wrapper shadow animate__animated animate__fadeInRight padding"
+      >
+        <h1>BookShelf</h1>
+        <p>Kelola Buku jadi mudah dengan Bookshelf Apps, coba sekarang!</p>
+        <div class="searchContainer">
+          <form id="searchBook">
+            <input type="search" placeholder="Cari Buku Spesifik" />
+          </form>
+        </div>
+        <section>
+          <h2 class="purpleColor">Belum selesai dibaca</h2>
+
+          <div id="incompleteBookshelfList" class="book_list"></div>
+        </section>
+
+        <section>
+          <h2 class="purpleColor">Selesai dibaca</h2>
+
+          <div id="completeBookshelfList" class="book_list"></div>
+        </section>
+      </div>
+    </main>
+
+    <script src="./assets/src/index.js"></script>
+  </body>
+</html>

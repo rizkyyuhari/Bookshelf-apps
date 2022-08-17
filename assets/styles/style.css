@@ -1,0 +1,185 @@
+body {
+    background: linear-gradient(#9555f6, #6220c6);
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 20px;
+}
+
+main.main {
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    min-height: 100vh;
+    gap: 10px;
+}
+
+
+.padding {
+    padding: 20px;
+}
+
+
+.profile-card {
+    background-color: #eee;
+    width: 30%;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.image-profile-wrapper {
+    height: 100px;
+    width: 100px;
+    background: #8f44fd;
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 2px;
+    position: absolute;
+    top: -50px;
+   
+}
+
+.image-profile {
+    background-image: url(../image/profile.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.profile-name {
+    max-width: 70%;
+    margin-top: 70px;
+}
+
+.purpleColor {
+    color: #8f44fd;
+}
+
+.jumlah-buku,
+.jumlah-buku-title {
+    align-self: center;
+}
+
+input[type='text'],
+input[type='date'] {
+    display: block;
+    width: 100%;
+
+}
+
+.form-gap {
+    margin-bottom: 10px;
+}
+
+
+
+
+.bookshelf-wrapper {
+    background-color: #eee;
+    width: 70%;
+}
+
+#incompleteBookshelfList,
+#completeBookshelfList {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+
+.book_item {
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.book_item:hover {
+    transform: scale(1.02);
+}
+
+
+label,
+input,
+button {
+    font-size: 1.02rem;
+    line-height: 1.2;
+
+}
+
+button {
+    border-radius: 10px;
+}
+
+button.green {
+    background: #5cdb5c;
+    color: #fff;
+    border: none;
+    padding: 0.6rem;
+}
+
+button.red {
+    background: #d7352a;
+    color: #fff;
+    border: none;
+    padding: 0.6rem;
+}
+
+button.green:hover {
+    background-color: #42a242;
+}
+
+button.red:hover {
+    background-color: #af2d24;
+}
+
+input:focus {
+    outline: 1px solid #8f44fd;
+
+}
+
+input {
+    box-sizing: border-box;
+    padding: 0.4rem;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+
+input:checked {
+    background-color: #8f44fd;
+}
+
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+
+@media (max-width: 766px) {
+    main.main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-card,
+    .bookshelf-wrapper {
+        width: 80%;
+    }
+
+    #incompleteBookshelfList,
+    #completeBookshelfList {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .book_item {
+        width: 60%;
+    }
+}
